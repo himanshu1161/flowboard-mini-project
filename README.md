@@ -28,22 +28,6 @@ npm run dev        # http://localhost:5173
 
 Data persists in `localStorage` (key `flowboard:v1`). To return to the seed state, open the **user switcher → Reset demo data**.
 
-### 30-second demo: Alice vs Bob
-
-1. As **Alice (admin)** the sidebar shows both spaces, including the private **Marketing** space 🔒, and all three lists. Open **Sprint 12**.
-2. Open the user switcher (top right) and pick **Bob (member)**.
-   - The tree immediately shrinks to *Engineering → Q2 Launch → Backlog*.
-   - The open Sprint 12 board is replaced by a **403 Permission denied** state.
-3. Switch to **Carol (member)**. She sees Marketing because of an explicit `allow` grant, and Sprint 12 because she has no `deny`.
-4. As Alice, use a node's **⋯ → Sharing & access** to change grants or visibility. Each member's "Can see this / Hidden" status updates live.
-5. Open **Simulate** in the top bar and turn on random failures. Drag a card: it moves instantly, then snaps back with a shake and an error toast that offers **Retry**.
-
-| Bob after switching | Task drawer | List view |
-| --- | --- | --- |
-| ![403](docs/bob-403.png) | ![Drawer](docs/task-drawer.png) | ![List](docs/list-view.png) |
-
----
-
 ## 2. Architecture
 
 The code is organised in three layers, so that business rules live outside the UI.
